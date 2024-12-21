@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Logo</title>
+    <style>
+        /* Center the logo on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Outer Gradient Circle */
+        .instagram-logo {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Inner White Circle */
+        .instagram-logo::before {
+            content: '';
+            width: 120px;
+            height: 120px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        /* Camera Icon */
+        .camera-icon {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border: 3px solid #fff;
+            border-radius: 20%;
+            background: transparent;
+        }
+
+        /* Lens Circle */
+        .camera-icon::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Flash Dot */
+        .camera-icon::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="instagram-logo">
+        <div class="camera-icon"></div>
+    </div>
+</body>
+</html>
